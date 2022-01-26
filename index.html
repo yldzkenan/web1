@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<title>CK Aqua</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initaial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="denemecss.css">
+  <script>
+    var responsiveSlider = function() {
+
+var slider = document.getElementById("slider");
+var sliderWidth = slider.offsetWidth;
+var slideList = document.getElementById("slideWrap");
+var count = 1;
+var items = slideList.querySelectorAll("li").length;
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+
+window.addEventListener('resize', function() {
+  sliderWidth = slider.offsetWidth;
+});
+
+var prevSlide = function() {
+  if(count > 1) {
+    count = count - 2;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+  else if(count = 1) {
+    count = items - 1;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+};
+
+var nextSlide = function() {
+  if(count < items) {
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+  else if(count = items) {
+    slideList.style.left = "0px";
+    count = 1;
+  }
+};
+
+next.addEventListener("click", function() {
+  nextSlide();
+});
+
+prev.addEventListener("click", function() {
+  prevSlide();
+});
+
+setInterval(function() {
+  nextSlide()
+}, 4000);
+
+};
+
+window.onload = function() {
+responsiveSlider();  
+}
+  </script>
+</head>
+<body>
+  <video autoplay loop muted>
+    <source src="aqua.mp4" type="video/mp4">
+   </video>   
+    <nav>
+        <div id="logo">CK Aqua</div>
+
+        <label for="drop" class="toggle">Menü</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+              <li><a href="index.html">Anasayfa</a></li>
+              <li>
+                  <label for="drop-1" class="toggle">Havuzlarımız</label>
+                  <a href="#">Havuzlarımız</a>
+                  <input type="checkbox" id="drop-1"/>
+                  <ul>
+                      <li><a href="olimpik.html">Olimpik Havuz</a></li>
+                      <li><a href="eglence.html">Eğlence Havuzu</a></li>
+                      <li><a href="cocuk.html">Çocuk Havuzu</a></li>
+                  </ul> 
+              </li>
+              <li>
+                <label for="drop-1" class="toggle">Birimlerimiz</label>
+                <a href="#">Birimlerimiz</a>
+                <input type="checkbox" id="drop-1"/>
+                <ul>
+                    <li><a href="yonetim.html">Yönetim</a></li>
+                    <li><a href="operator.html">Havuz Görevlileri</a></li>
+                    <li><a href="temizlik.html">Temizlik</a></li>
+                </ul> 
+            </li>
+              <li>
+              <label for="drop-2" class="toggle">Hizmetlerimiz</label>
+              <a href="ücretler.html">Tarife ve Ücretler</a></li>
+              <li><a href="hakkımızda.html">Hakkımızda</a></li>
+              <li><a href="misyon-vizyon.html">Misyon-Vizyon</a></li>
+              </li>
+              <li><a href="ulasim.html">Ulaşım</a></li>
+            </ul>
+        </nav>
+
+        <body>
+          <div class="alert-box">
+            <span class="badge">
+	<a class="button" href="#popup1">Duyuru</a>
+
+  <div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Süper İndirimler başladı</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p>2022 YAZ SEZONUNDA HER HAVUZA ALINACAK 2. BİLETTE %50 İNDİRİM!</p>>
+		</div>
+	</div>
+</div></a></span>Süper İndirimler başladı
+<span class="badge">
+	<a class="button" href="#popup2">Duyuru</a>
+
+  <div id="popup2" class="overlay">
+	<div class="popup">
+		<h2>Biz Hazırız</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p>2022 SEZONU 19 MAYIS TARİHİNDEN İTİBAREN BAŞLIYOR! YERİNİZİ AYIRTIN BU FIRATI KAÇIRMAYIN</p>
+		</div>
+	</div>
+</div></a></span>Biz Hazırız
+<span class="badge">
+	<a class="button" href="#popup3">Duyuru</a>
+
+  <div id="popup3" class="overlay">
+	<div class="popup">
+		<h2>Yılın Son İndirimleri</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p>YERİNİ 2021 YILINDA AYIRTAN MÜŞTERİLERİMİZE ÖZEL EK %40 iNDİRİM!</p>
+		</div>
+	</div>
+</div></a></span>Yılın Son İndirimleri
+</div>
+<h1 style="color:orange; font-weight: bold; font-family:courier,arial,helvetica;">HOŞGELDİNİZ</h1>
+<p></p>
+<div id="slider">
+  <ul id="slideWrap"> 
+    <li><a href="cocuk.html"><img src="1cocuk.jpg" alt="Çocuk Havuzu"></a></li>
+    <li><a href="eglence.html"><img src="kamikaze.jpg" alt="Eğlence Havuzu"></a></li>
+    <li><a href="olimpik.html"><img src="olimpil.jpg" alt="Olimpik Havuzu"></a></li>
+  </ul>
+  <a id="prev" href="#">&#8810;</a>
+  <a id="next" href="#">&#8811;</a>
+</div>
+<h3></h3> 
+<div class="container">
+  <div class="column" style="background-color:turquoise;">
+    <h4 style="color: red;"> Avrupa’nın En Büyük Kaydırakları </h4>
+  <p>  
+    Roket formunda, özel giriş teknolojisiyle fark yaratan, 24,5 metrelik yüksekliği ile Avrupa’nın en büyüğü!</p>
+  </div>
+  <div class="column" style="background-color:turquoise;">
+    <h4 style="color: red;"> Gökkuşağının Her Rengi </h4>
+  <p>  
+    Fiberglas tüp içine doğrudan renk efektleri ekleyerek, sürüş içinde benzersiz bir görsel efektin sunulduğu Roaster kaydırağı CK Aqua’da!</p>
+  </div>
+  <div class="column" style="background-color:turquoise;">
+    <h4 style="color: red;"> Avrupa ve Türkiye’de Tek </h4>
+  <p>  
+    15 bin m2’lik bir alanda kurulan olan CK Aqua’da , Türkiye ve Avrupa’da bir marina ile entegre olarak inşa edilen ilk aquapark olma özelliğini taşıyor!</p>
+  </div>
+</div>
+<h3></h3>
+<footer class="footer">
+  <div class="l-footer">
+  <h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12765.639499260344!2d30.6625336!3d36.8805418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4bd5f80eb5545824!2sAntalya%20Dolphinland!5e0!3m2!1str!2str!4v1637845135952!5m2!1str!2str" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <ul class="r-footer">
+  <li>
+    <h2>
+  Sosyal Medya</h2>
+  <ul class="box">
+  <li><a href="https://www.google.com.tr/">Facebook</a></li>
+  <li><a href="https://www.google.com.tr/">Twitter</a></li>
+  <li><a href="https://www.google.com.tr/">Pinterest</a></li>
+  <li><a href="https://www.google.com.tr/">Dribbble</a></li>
+  </ul>
+  </li>
+  <li class="features">
+    <h2>
+  Bilgiler</h2>
+  <ul class="box h-box">
+  <li><a href="hakkımızda.html">Hakkımızda</a></li>
+  <li><a href="misyon-vizyon.html">Misyon ve Vizyon</a></li>
+  <li><a href="ulasim.html">Ulaşım</a></li>
+  <li><a href="ücretler.html">Ücretler</a></li>
+  <li><a href="yonetim.html">Yönetim</a></li>
+  <li><a href="olimpik.html">Havuz</a></li>
+  </ul>
+  </li>
+  <li>
+  <ul class="box">
+  <li>(0242) 200 00 07</li>
+  <li>Adres: Meltem Mh., Dumlupınar Blv. Konyaaltı Koruluğu, 07030 Muratpaşa/Antalya</li>
+  <li style="font-weight: bold;">©2021<br>Ömercan Durmaz<br>Kenan Yıldız</li>
+  </ul>
+  </li>
+  </ul>
+</footer>           
+</body>
+</html>
